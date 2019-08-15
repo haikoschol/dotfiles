@@ -1,0 +1,20 @@
+setopt SHARE_HISTORY
+setopt extended_glob
+
+fpath=(~/dotfiles/zsh "${fpath[@]}")
+
+autoload -Uz compinit kp
+compinit
+
+HISTFILE=~/.zhistory
+SAVEHIST=10000
+HISTSIZE=$SAVEHIST
+
+PROMPT="%F{cyan}%n@%m%f %F{yellow}%1~%f%F{green} $ %f"
+export PATH=$HOME/bin:$PATH
+
+export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
+
+alias pacs='pacman -Ss | fzf'
