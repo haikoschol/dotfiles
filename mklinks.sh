@@ -20,3 +20,6 @@ ln -s ~/dotfiles/systemd/wallpaper.service ~/.config/systemd/user/wallpaper.serv
 ln -s ~/dotfiles/systemd/wallpaper.timer ~/.config/systemd/user/wallpaper.timer
 
 ln -s ~/dotfiles/emacs.d ~/.emacs.d
+
+mkdir ~/bin
+ln -s ~/dotfiles/bin/change_wallpaper.sh ~/bin/change_wallpaper.sh
