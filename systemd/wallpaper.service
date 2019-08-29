@@ -1,0 +1,7 @@
+[Unit]
+Description=Change wallpaper
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/sh %h/bin/change_wallpaper.sh
+

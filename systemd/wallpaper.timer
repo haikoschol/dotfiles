@@ -1,0 +1,8 @@
+[Unit]
+Description=Changes wallpaper periodically
+
+[Timer]
+OnCalendar=*:0/30
+
+[Install]
+WantedBy=sway-session.target
