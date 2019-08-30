@@ -14,10 +14,14 @@ ln -s ~/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 mkdir -p ~/.config/albert
 ln -s ~/dotfiles/albert/albert.conf ~/.config/albert/albert.conf
 
+mkdir -p ~/.config/redshift
+ln -s ~/dotfiles/redshift/redshift.conf ~/.config/redshift/redshift.conf
+
 mkdir -p ~/.config/systemd/user
 ln -s ~/dotfiles/systemd/sway-session.target ~/.config/systemd/user/sway-session.target
 ln -s ~/dotfiles/systemd/wallpaper.service ~/.config/systemd/user/wallpaper.service
 ln -s ~/dotfiles/systemd/wallpaper.timer ~/.config/systemd/user/wallpaper.timer
+ln -s ~/dotfiles/systemd/redshift.service ~/.config/systemd/user/redshift.service
 
 ln -s ~/dotfiles/emacs.d ~/.emacs.d
 
