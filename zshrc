@@ -1,3 +1,5 @@
+[[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
+
 setopt SHARE_HISTORY
 setopt extended_glob
 
