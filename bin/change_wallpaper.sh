@@ -1,6 +1,6 @@
 #!/bin/sh
 
-STASH="$HOME/Photos/wallpapers/"
+STASH="$HOME/Pictures/wallpapers/"
 WP=$(ls $STASH | shuf -n 1)
 ln -f -s $STASH$WP $HOME/wallpaper.jpg
 
