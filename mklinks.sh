@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/zprofile ~/.zprofile
 
 mkdir -p ~/.config/sway
 ln -s ~/dotfiles/sway/config ~/.config/sway/config
