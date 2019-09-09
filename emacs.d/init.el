@@ -25,3 +25,8 @@
 	("melpa" . "https://melpa.org/packages/")))
 
 (load-theme 'base16-materia t)
+
+(global-set-key (kbd "M-j")
+		(lambda ()
+		  (interactive)
+		  (join-line -1)))
