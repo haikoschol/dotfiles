@@ -26,6 +26,8 @@
 
 (load-theme 'base16-materia t)
 
+(rg-enable-default-bindings)
+
 (global-set-key (kbd "M-j")
 		(lambda ()
 		  (interactive)
