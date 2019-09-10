@@ -4,25 +4,28 @@
 # The man page is also hosted at http://vivien.github.io/i3blocks
 
 ### Global properties
-command=/usr/lib/i3blocks/$BLOCK_NAME
 separator_block_width=16
-interval=3
+interval=5
 
 [wifi]
-label=WLAN
-instance=wlp2s0
+label=WLAN 
+command=~/dotfiles/i3blocks/wifi
+INTERFACE=wlp2s0
 
-[network]
-command=~/dotfiles/i3blocks/network
-color=#40FF40
+[wifi]
+label=WLAN 
+command=~/dotfiles/i3blocks/wifi
+INTERFACE=wlp59s0
 
 [volume]
 command=~/dotfiles/i3blocks/volume-ponymix
 signal=1
 
 [battery]
+command=~/dotfiles/i3blocks/battery
+interval=30
 label=BAT
 
 [time]
 command=date '+%Y-%m-%d %H:%M'
-
+interval=1
