@@ -1,15 +1,16 @@
 # -*- mode: gitignore; -*-
 *~
 \#*\#
+.\#*
 *.elc
 emacs.d/auto-save-list
-emacs.d/tramp
-emacs.d/transient
-.\#*
-
+emacs.d/elpa/
 emacs.d/eshell/history
 emacs.d/eshell/lastdir
-emacs.d/elpa/
-emacs.d/server/
 emacs.d/games/
+emacs.d/ido.last
 emacs.d/network-security.data
+emacs.d/places
+emacs.d/server/
+emacs.d/tramp
+emacs.d/transient
