@@ -36,6 +36,8 @@
 (setq neo-window-fixed-size nil)
 (setq uniquify-buffer-name-style 'forward)
 
+(windmove-default-keybindings)
+
 (rg-enable-default-bindings)
 
 (global-set-key (kbd "M-j")
@@ -51,3 +53,4 @@
 (global-set-key (kbd "C-r") 'isearch-backward-regexp)
 (global-set-key (kbd "C-M-s") 'isearch-forward)
 (global-set-key (kbd "C-M-r") 'isearch-backward)
+(global-set-key (kbd "M-o") 'other-window)
