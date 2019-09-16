@@ -40,6 +40,9 @@
 
 (rg-enable-default-bindings)
 
+(global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "C-x C-z"))
+
 (global-set-key (kbd "M-j")
 		(lambda ()
 		  (interactive)
