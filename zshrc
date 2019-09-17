@@ -22,3 +22,4 @@ source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 
 alias pacs='pacman -Ss | fzf'
+alias em='emacs -nw -q'
