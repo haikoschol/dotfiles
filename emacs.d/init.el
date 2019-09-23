@@ -29,6 +29,8 @@
       '(("gnu" . "https://elpa.gnu.org/packages/")
 	("melpa" . "https://melpa.org/packages/")))
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 (package-install-selected-packages)
 
 (load-theme 'base16-materia t)
