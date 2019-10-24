@@ -3,9 +3,7 @@
 setopt SHARE_HISTORY
 setopt extended_glob
 
-fpath=(~/dotfiles/zsh "${fpath[@]}")
-
-autoload -Uz compinit kp
+autoload -Uz compinit
 compinit
 
 HISTFILE=~/.zhistory
