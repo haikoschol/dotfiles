@@ -13,11 +13,10 @@ HISTSIZE=$SAVEHIST
 PROMPT="%F{cyan}%n@%m%f %F{yellow}%1~%f%F{green} $ %f"
 
 export PATH=$HOME/bin:$PATH
-export EDITOR="emacs -nw -q"
+export EDITOR=vim
 
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 
 alias pacs='pacman -Ss | fzf'
-alias em='emacs -nw -q'

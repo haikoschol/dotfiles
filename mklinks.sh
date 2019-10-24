@@ -30,3 +30,6 @@ mkdir ~/bin
 ln -s ~/dotfiles/bin/change_wallpaper.sh ~/bin/change_wallpaper.sh
 
 ln -s ~/dotfiles/Xresources ~/.Xresources
+
+ln -s ~/dotfiles/vim ~/.vim
+ln -s ~/dotfiles/vimrc ~/.vimrc
