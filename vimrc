@@ -34,12 +34,6 @@ command W w !sudo tee % > /dev/null
 " VIM user interface
 "------------------------------------------------------------------------------
 
-" Avoid garbled characters in Chinese language windows OS
-let $LANG='en'
-set langmenu=en
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
-
 " Turn on the WiLd menu
 set wildmenu
 
@@ -285,6 +279,8 @@ set laststatus=2
 " Format the status line
 " set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
 
+" remove tab bar
+set showtabline=0
 
 "------------------------------------------------------------------------------
 " Editing mappings
