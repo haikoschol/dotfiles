@@ -1,5 +1,4 @@
-set nocompatible
-filetype off
+colorscheme base16-oceanicnext
 
 filetype plugin indent on
 " Brief help
