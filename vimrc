@@ -184,6 +184,8 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
+autocmd FileType yml,yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 " Round indent to multiple of 'shiftwidth' for > and < commands
 set shiftround
 
@@ -312,6 +314,8 @@ autocmd BufWrite *.py :call DeleteTrailingWS()
 autocmd BufWrite *.js :call DeleteTrailingWS()
 autocmd BufWrite *.jsx :call DeleteTrailingWS()
 autocmd BufWrite *.coffee :call DeleteTrailingWS()
+autocmd BufWrite *.yml :call DeleteTrailingWS()
+autocmd BufWrite *.yaml :call DeleteTrailingWS()
 
 " visual shifting (does not exit Visual mode)
 vnoremap < <gv
