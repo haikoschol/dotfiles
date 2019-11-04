@@ -17,6 +17,8 @@ export EDITOR=vim
 
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
 export FZF_DEFAULT_OPTS="--preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -300' --preview-window='right:hidden:wrap' --bind='f2:toggle-preview'"
+
+bindkey -e
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 
