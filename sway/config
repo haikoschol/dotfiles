@@ -59,6 +59,10 @@ input "1241:17733:USB_Keyboard" {
     repeat_rate 35
 }
 
+input "Logitech Anywhere MX" {
+    pointer_accel 0.9
+}
+
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
@@ -76,7 +80,7 @@ input "1241:17733:USB_Keyboard" {
     bindsym $mod+d exec $menu
 
     bindsym $mod+Control+l exec swaylock -i /home/hs/wallpaper.jpg
-    
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -209,7 +213,7 @@ bindsym XF86AudioMute exec ponymix toggle && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioRaiseVolume exec ponymix increase 5 && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioLowerVolume exec ponymix decrease 5 && pkill -RTMIN+1 i3blocks
 bindsym $mod+F6 exec pavucontrol
- 
+
 bar {
     position bottom
     status_command i3blocks
