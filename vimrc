@@ -1,4 +1,4 @@
-colorscheme base16-oceanicnext
+" colorscheme base16-oceanicnext
 
 filetype plugin indent on
 " Brief help
