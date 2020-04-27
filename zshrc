@@ -12,7 +12,7 @@ HISTSIZE=$SAVEHIST
 
 PROMPT="%F{cyan}%n@%m%f %F{yellow}%1~%f%F{green} $ %f"
 
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:$HOME/.cargo/bin:$PATH
 export EDITOR=vim
 
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
