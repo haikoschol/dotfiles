@@ -22,7 +22,5 @@ bindkey -e
 source $HOME/dotfiles/vendor/fzf/completion.zsh
 source $HOME/dotfiles/vendor/fzf/key-bindings.zsh
 
-alias pacs='pacman -Ss | fzf'
-
 [[ -f $HOME/.creds.zsh ]] && source $HOME/.creds.zsh
 
