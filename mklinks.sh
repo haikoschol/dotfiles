@@ -28,6 +28,7 @@ ln -s ~/dotfiles/emacs.d ~/.emacs.d
 
 mkdir ~/bin
 ln -s ~/dotfiles/bin/change_wallpaper.sh ~/bin/change_wallpaper.sh
+ln -s ~/dotfiles/bin/update_everything.sh ~/bin/update_everything.sh
 
 ln -s ~/dotfiles/Xresources ~/.Xresources
 
