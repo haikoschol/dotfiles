@@ -14,3 +14,5 @@ emacs.d/places
 emacs.d/server/
 emacs.d/tramp
 emacs.d/transient
+vim/.netrwhist
+
