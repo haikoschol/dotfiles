@@ -10,9 +10,12 @@ HISTFILE=~/.zhistory
 SAVEHIST=10000
 HISTSIZE=$SAVEHIST
 
-PROMPT="%F{cyan}%n@%m%f %F{yellow}%1~%f%F{green} $ %f"
+PROMPT="%F{yellow}%1~%f%F{green}$ %f"
+KUBE_PS1_SYMBOL_ENABLE=false
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
 
-export PATH=$HOME/bin:$HOME/.cargo/bin:$PATH
+export PATH=$HOME/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH
 export EDITOR=vim
 export QT_QPA_PLATFORM=wayland
 
@@ -21,12 +24,12 @@ export FZF_DEFAULT_OPTS="--preview='[[ \$(file --mime {}) =~ binary ]] && echo {
 
 export SSH_AUTH_SOCK=/Users/haiko/.gnupg/S.gpg-agent.ssh
 
+export CLOUDSDK_PYTHON=/usr/local/opt/python@3/bin/python3
+
 bindkey -e
 source $HOME/dotfiles/vendor/fzf/completion.zsh
 source $HOME/dotfiles/vendor/fzf/key-bindings.zsh
 
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
 [[ -f $HOME/.creds.zsh ]] && source $HOME/.creds.zsh
 
+alias sha256sum='shasum -a 256'

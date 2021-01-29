@@ -16,3 +16,4 @@ emacs.d/tramp
 emacs.d/transient
 vim/.netrwhist
 
+.DS_Store
