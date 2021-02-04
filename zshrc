@@ -26,3 +26,9 @@ source $HOME/dotfiles/vendor/fzf/key-bindings.zsh
 
 [[ -f $HOME/.creds.zsh ]] && source $HOME/.creds.zsh
 
+if [[ "$TERMINAL_EMULATOR" == "JetBrains-JediTerm" ]]; then
+  bindkey "∫" backward-word # Option-b
+  bindkey "ƒ" forward-word  # Option-f
+  bindkey "∂" delete-word   # Option-d
+fi
+
