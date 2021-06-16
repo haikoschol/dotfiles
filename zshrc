@@ -3,8 +3,9 @@
 setopt SHARE_HISTORY
 setopt extended_glob
 
+fpath=(~/dotfiles/zsh/completions $fpath)
 autoload -Uz compinit
-compinit
+compinit -u
 
 HISTFILE=~/.zhistory
 SAVEHIST=10000
@@ -23,6 +24,8 @@ export SSH_AUTH_SOCK=/Users/haiko/.gnupg/S.gpg-agent.ssh
 bindkey -e
 source $HOME/dotfiles/vendor/fzf/completion.zsh
 source $HOME/dotfiles/vendor/fzf/key-bindings.zsh
+source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
 [[ -f $HOME/.creds.zsh ]] && source $HOME/.creds.zsh
 
@@ -32,3 +35,5 @@ if [[ "$TERMINAL_EMULATOR" == "JetBrains-JediTerm" ]]; then
   bindkey "∂" delete-word   # Option-d
 fi
 
+alias oni='/Applications/Onivim2.app/Contents/MacOS/Oni2'
+alias ll='ls -lah'
