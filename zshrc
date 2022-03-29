@@ -13,13 +13,23 @@ HISTSIZE=$SAVEHIST
 
 PROMPT="%F{yellow}%1~%f%F{green}$ %f"
 
-export PATH=$HOME/bin:$HOME/go/bin:$HOME/.cargo/bin:/opt/homebrew/sbin:/opt/homebrew/bin:$PATH
+function gsw() {
+    SEARCH=${@:-''};
+    if [ $SEARCH ]; then
+        git branch --format "%(refname:short)" | fzf -i -1 --preview 'git log --oneline {}' --query "$SEARCH" | xargs git switch
+    else
+        git branch --format "%(refname:short)"  fzf -i -1 --preview 'git log --oneline {}' | xargs git switch
+    fi
+}
+
+export PATH=$HOME/bin:$HOME/go/bin:$HOME/.cargo/bin:/opt/homebrew/sbin:/opt/homebrew/opt/node@16/bin:/opt/homebrew/bin:$PATH
 export EDITOR=vim
 
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
 export FZF_DEFAULT_OPTS="--preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -300' --preview-window='right:hidden:wrap' --bind='f2:toggle-preview'"
 
 export SSH_AUTH_SOCK=/Users/haiko/.gnupg/S.gpg-agent.ssh
+export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
 
 bindkey -e
 source $HOME/dotfiles/vendor/fzf/completion.zsh
@@ -36,4 +46,4 @@ if [[ "$TERMINAL_EMULATOR" == "JetBrains-JediTerm" ]]; then
 fi
 
 alias oni='/Applications/Onivim2.app/Contents/MacOS/Oni2'
-alias ll='ls -lah'
+alias ll='lsd -la'
