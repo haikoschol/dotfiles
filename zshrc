@@ -45,5 +45,14 @@ if [[ "$TERMINAL_EMULATOR" == "JetBrains-JediTerm" ]]; then
   bindkey "∂" delete-word   # Option-d
 fi
 
-alias oni='/Applications/Onivim2.app/Contents/MacOS/Oni2'
+#defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
 alias ll='lsd -la'
+alias sweep-cargo='cargo sweep --toolchains $(rustup default | cut -d " " -f 1) -r'
+
+# bun completions
+[ -s "/Users/haiko/.bun/_bun" ] && source "/Users/haiko/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
