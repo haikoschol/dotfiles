@@ -1,4 +1,4 @@
-colorscheme base16-oceanicnext
+" colorscheme base16-oceanicnext
 
 filetype plugin indent on
 " Brief help
@@ -372,7 +372,7 @@ map <leader>s? z=
 "------------------------------------------------------------------------------
 
 " make json readable
-noremap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
+noremap <leader>jt <Esc>:%!python3 -m json.tool<CR><Esc>:set filetype=json<CR>
 
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
