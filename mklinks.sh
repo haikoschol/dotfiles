@@ -1,6 +1,9 @@
 #!/bin/bash
 
 ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/vim ~/.vim
+ln -s ~/dotfiles/vimrc ~/.vimrc
 ln -s ~/dotfiles/hammerspoon ~/.hammerspoon
 
 #ln -s ~/dotfiles/zprofile ~/.zprofile
@@ -34,5 +37,3 @@ ln -s ~/dotfiles/hammerspoon ~/.hammerspoon
 #
 #ln -s ~/dotfiles/Xresources ~/.Xresources
 #
-ln -s ~/dotfiles/vim ~/.vim
-ln -s ~/dotfiles/vimrc ~/.vimrc
