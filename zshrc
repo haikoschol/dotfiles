@@ -3,7 +3,12 @@
 setopt SHARE_HISTORY
 setopt extended_glob
 
-fpath=($HOME/dotfiles/zsh/completions $fpath)
+if [[ $(uname) = "Darwin" ]]; then
+	fpath=($HOME/dotfiles/zsh/completions /opt/homebrew/share/zsh/site-functions $fpath)
+else
+	fpath=($HOME/dotfiles/zsh/completions $fpath)
+fi
+
 autoload -Uz compinit
 compinit -u
 
