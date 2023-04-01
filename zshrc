@@ -27,7 +27,6 @@ function gsw() {
     fi
 }
 
-export PATH=$HOME/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH
 export EDITOR=vim
 
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
@@ -38,19 +37,21 @@ export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 export ORT_DATA_DIR=$HOME/nobackup/ort_data
 export ORT_CONFIG_DIR=$HOME/.ort/config
 
-bindkey -e
-source $HOME/dotfiles/vendor/fzf/completion.zsh
-source $HOME/dotfiles/vendor/fzf/key-bindings.zsh
-
 if [[ $(uname) == "Darwin" ]]; then
     export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
-    export PATH=$PATH:/opt/homebrew/sbin:/opt/homebrew/opt/node@16/bin:/opt/homebrew/bin
+    export PATH=/opt/homebrew/opt/gawk/libexec/gnubin:/opt/homebrew/sbin:/opt/homebrew/opt/node@16/bin:/opt/homebrew/bin:$PATH
     source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
     source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
     # set default search scope in finder to current folder
     defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 fi
+
+export PATH=$HOME/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH
+
+bindkey -e
+source $HOME/dotfiles/vendor/fzf/completion.zsh
+source $HOME/dotfiles/vendor/fzf/key-bindings.zsh
 
 [[ -f $HOME/.creds.zsh ]] && source $HOME/.creds.zsh
 
