@@ -31,6 +31,9 @@ export FZF_DEFAULT_OPTS="--preview='[[ \$(file --mime {}) =~ binary ]] && echo {
 export SSH_AUTH_SOCK=/Users/haiko/.gnupg/S.gpg-agent.ssh
 export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
 
+export ORT_DATA_DIR=~/nobackup/ort_data
+export ORT_CONFIG_DIR=~/.ort/config
+
 bindkey -e
 source $HOME/dotfiles/vendor/fzf/completion.zsh
 source $HOME/dotfiles/vendor/fzf/key-bindings.zsh
