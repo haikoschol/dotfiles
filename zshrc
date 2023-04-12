@@ -40,13 +40,15 @@ export ORT_CONFIG_DIR=$HOME/.ort/config
 if [[ $(uname) == "Darwin" ]]; then
     export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
     export PATH=/opt/homebrew/opt/gawk/libexec/gnubin:/opt/homebrew/sbin:/opt/homebrew/opt/node@16/bin:/opt/homebrew/bin:$PATH
-    source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-    source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+    export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
+    #source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+    #source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
     # set default search scope in finder to current folder
     defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 fi
 
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 export PATH=$HOME/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH
 
 bindkey -e
