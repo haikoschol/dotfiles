@@ -1,6 +1,6 @@
 #!/bin/bash
 
-! [[ -e ~/.zshrc ]] && -ln -s ~/dotfiles/zshrc ~/.zshrc
+! [[ -e ~/.zshrc ]] && ln -s ~/dotfiles/zshrc ~/.zshrc
 ! [[ -e ~/.tmux.conf ]] && ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
 ! [[ -e ~/.vim ]] && ln -s ~/dotfiles/vim ~/.vim
 ! [[ -e ~/.vimrc ]] && ln -s ~/dotfiles/vimrc ~/.vimrc
