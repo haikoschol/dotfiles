@@ -86,7 +86,7 @@ scrolling:
 # Font configuration (changes require restart)
 font:
   normal:
-    family: "SauceCodePro Nerd Font"
+    family: "SauceCodePro Nerd Font Mono"
     style: Regular
 
   bold:
