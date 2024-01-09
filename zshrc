@@ -74,3 +74,6 @@ fi
 alias ll='lsd -la'
 alias sweep-cargo='cargo sweep --toolchains $(rustup default | cut -d " " -f 1) -r'
 
+
+# bun completions
+[ -s "/Users/haiko/.bun/_bun" ] && source "/Users/haiko/.bun/_bun"
