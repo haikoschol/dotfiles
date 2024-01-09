@@ -1,0 +1,107 @@
+#dynamic_title = true
+live_config_reload = true
+working_directory = "None"
+
+[colors]
+draw_bold_text_with_bright_colors = false
+
+[colors.bright]
+black = "0x65737e"
+blue = "0xa7adba"
+cyan = "0xab7967"
+green = "0x343d46"
+magenta = "0xcdd3de"
+red = "0xf99157"
+white = "0xd8dee9"
+yellow = "0x4f5b66"
+
+[colors.cursor]
+cursor = "0xc0c5ce"
+text = "0x1b2b34"
+
+[colors.normal]
+black = "0x1b2b34"
+blue = "0x6699cc"
+cyan = "0x5fb3b3"
+green = "0x99c794"
+magenta = "0xc594c5"
+red = "0xec5f67"
+white = "0xc0c5ce"
+yellow = "0xfac863"
+
+[colors.primary]
+background = "0x283842"
+foreground = "0xc0c5ce"
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
+[debug]
+log_level = "Warn"
+persistent_logging = false
+print_events = false
+#ref_test = false
+render_timer = false
+
+[font]
+size = 12.0
+
+[font.bold]
+style = "Medium"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+style = "It"
+
+[font.normal]
+family = "SauceCodePro Nerd Font Mono"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 1
+
+[mouse]
+hide_when_typing = false
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+#[mouse.double_click]
+#threshold = 300
+
+#[mouse.triple_click]
+#threshold = 300
+
+[scrolling]
+history = 100000
+multiplier = 3
+
+[selection]
+save_to_clipboard = false
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+#[visual_bell]
+#animation = "EaseOutExpo"
+#color = "0xffffff"
+#duration = 0
+
+[window]
+decorations = "none"
+dynamic_padding = false
+opacity = 1.0
+option_as_alt = "OnlyLeft"
+startup_mode = "Windowed"
+
+[window.dimensions]
+columns = 0
+lines = 0
+
+[window.padding]
+x = 0
+y = 0

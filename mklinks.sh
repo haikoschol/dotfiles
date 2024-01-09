@@ -7,7 +7,7 @@
 ! [[ -e ~/.hammerspoon ]] && ln -s ~/dotfiles/hammerspoon ~/.hammerspoon
 
 mkdir -p ~/.config/alacritty
-! [[ -e ~/.config/alacritty/alacritty.yml ]] && ln -s ~/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+! [[ -e ~/.config/alacritty/alacritty.toml ]] && ln -s ~/dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 
 mkdir -p ~/bin
 ! [[ -e ~/bin/yank ]] && ln -s ~/dotfiles/bin/yank ~/bin/yank
