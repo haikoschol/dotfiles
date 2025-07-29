@@ -410,7 +410,7 @@ noremap <silent> <Leader>y y:<C-U>call Yank(@0)<CR>
 function! CopyYank() abort
   call Yank(join(v:event.regcontents, "\n"))
 endfunction
-autocmd TextYankPost * call CopyYank()
+" autocmd TextYankPost * call CopyYank()
 
 function! CmdLine(str)
     exe "menu Foo.Bar :" . a:str

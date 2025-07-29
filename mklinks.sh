@@ -9,10 +9,10 @@
 mkdir -p ~/.config/alacritty
 ! [[ -e ~/.config/alacritty/alacritty.toml ]] && ln -s ~/dotfiles/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 
-mkdir -p ~/bin
-! [[ -e ~/bin/yank ]] && ln -s ~/dotfiles/bin/yank ~/bin/yank
-
 if [[ $(uname) != "Darwin" ]]; then
+    mkdir -p ~/bin
+    ! [[ -e ~/bin/yank ]] && ln -s ~/dotfiles/bin/yank ~/bin/yank
+
     mkdir -p ~/.config/sway
     ! [[ -e ~/.config/sway/config ]] && ln -s ~/dotfiles/sway/config ~/.config/sway/config
 
@@ -35,4 +35,6 @@ if [[ $(uname) != "Darwin" ]]; then
     ! [[ -e ~/bin/update_everything.sh ]] && ln -s ~/dotfiles/bin/update_everything.sh ~/bin/update_everything.sh
 
     ! [[ -e ~/.Xresources ]] && ln -s ~/dotfiles/Xresources ~/.Xresources
+elif
+    ! [[ -e ~/bin/mac-yank ]] && ln -s ~/dotfiles/bin/yank ~/bin/mac-yank
 fi

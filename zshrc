@@ -32,24 +32,24 @@ export EDITOR=vim
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
 export FZF_DEFAULT_OPTS="--preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -300' --preview-window='right:hidden:wrap' --bind='f2:toggle-preview'"
 
-export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+#export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 
-export ORT_DATA_DIR=$HOME/nobackup/ort_data
-export ORT_CONFIG_DIR=$HOME/.ort/config
+#export ORT_DATA_DIR=$HOME/nobackup/ort_data
+#export ORT_CONFIG_DIR=$HOME/.ort/config
 
 if [[ $(uname) == "Darwin" ]]; then
     export LDFLAGS="-L/opt/homebrew/opt/libpq/lib"
     export PATH=/opt/homebrew/opt/gawk/libexec/gnubin:/opt/homebrew/sbin:/opt/homebrew/opt/node@16/bin:/opt/homebrew/bin:$PATH
-    export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
+#    export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
 
-    source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-    source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+#    source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+#    source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
     # set default search scope in finder to current folder
     defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
 fi
 
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+#export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 export PATH=$HOME/bin:$HOME/go/bin:$HOME/.cargo/bin:$PATH
 
 bindkey -e
@@ -74,6 +74,9 @@ fi
 alias ll='lsd -la'
 alias sweep-cargo='cargo sweep --toolchains $(rustup default | cut -d " " -f 1) -r'
 
+alias gib-grafana='kubectl --namespace monitoring port-forward svc/prom-stack-grafana 3000:80'
+alias gib-prometheus='kubectl -n monitoring port-forward svc/prom-stack-kube-prom-prometheus 9090:9090'
 
 # bun completions
-[ -s "/Users/haiko/.bun/_bun" ] && source "/Users/haiko/.bun/_bun"
+#[ -s "/Users/haiko/.bun/_bun" ] && source "/Users/haiko/.bun/_bun"
+
