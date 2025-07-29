@@ -91,7 +91,7 @@ alias ll='lsd -la'
 alias sweep-cargo='cargo sweep --toolchains $(rustup default | cut -d " " -f 1) -r'
 
 alias gib-grafana='kubectl --namespace monitoring port-forward svc/prom-stack-grafana 3000:80'
-alias gib-prometheus='kubectl -n monitoring port-forward svc/prom-stack-kube-prom-prometheus 9090:9090'
+alias gib-prometheus='kubectl -n monitoring port-forward svc/prom-stack-kube-prometheus-prometheus 9090:9090'
 
 # bun completions
 #[ -s "/Users/haiko/.bun/_bun" ] && source "/Users/haiko/.bun/_bun"
