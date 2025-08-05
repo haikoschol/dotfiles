@@ -43,7 +43,7 @@ function sub() {
     subrpc endpoints open "$chain"
 }
 
-export EDITOR=emacs
+export EDITOR=vim
 
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden"
 export FZF_DEFAULT_OPTS="--preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -300' --preview-window='right:hidden:wrap' --bind='f2:toggle-preview'"
