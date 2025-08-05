@@ -26,7 +26,7 @@ if [[ $(uname) != "Darwin" ]]; then
     ! [[ -e ~/.config/redshift/redshift.conf ]] && ln -s ~/dotfiles/redshift/redshift.conf ~/.config/redshift/redshift.conf
 
     mkdir -p ~/.config/systemd/user
-    ! [[ ~/.config/systemd/user/sway-session.target ]] && ln -s ~/dotfiles/systemd/sway-session.target ~/.config/systemd/user/sway-session.target
+    ! [[ -e ~/.config/systemd/user/sway-session.target ]] && ln -s ~/dotfiles/systemd/sway-session.target ~/.config/systemd/user/sway-session.target
     ! [[ -e ~/.config/systemd/user/wallpaper.service ]] && ln -s ~/dotfiles/systemd/wallpaper.service ~/.config/systemd/user/wallpaper.service
     ! [[ -e ~/.config/systemd/user/wallpaper.timer ]] && ln -s ~/dotfiles/systemd/wallpaper.timer ~/.config/systemd/user/wallpaper.timer
     ! [[ -e ~/.config/systemd/user/redshift.service ]] && ln -s ~/dotfiles/systemd/redshift.service ~/.config/systemd/user/redshift.service
@@ -35,6 +35,6 @@ if [[ $(uname) != "Darwin" ]]; then
     ! [[ -e ~/bin/update_everything.sh ]] && ln -s ~/dotfiles/bin/update_everything.sh ~/bin/update_everything.sh
 
     ! [[ -e ~/.Xresources ]] && ln -s ~/dotfiles/Xresources ~/.Xresources
-elif
+else
     ! [[ -e ~/bin/mac-yank ]] && ln -s ~/dotfiles/bin/yank ~/bin/mac-yank
 fi
