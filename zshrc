@@ -63,6 +63,8 @@ if [[ $(uname) == "Darwin" ]]; then
 
     # set default search scope in finder to current folder
     defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+else
+    export TERM=xterm
 fi
 
 #export USE_GKE_GCLOUD_AUTH_PLUGIN=True
