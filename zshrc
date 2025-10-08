@@ -98,3 +98,7 @@ alias gib-prometheus='kubectl -n monitoring port-forward svc/prom-stack-kube-pro
 # bun completions
 #[ -s "/Users/haiko/.bun/_bun" ] && source "/Users/haiko/.bun/_bun"
 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
